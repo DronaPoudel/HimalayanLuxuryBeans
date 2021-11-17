@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,300;1,400;1,700&display=swap');
+:root {
+	--blue: #242972;
+	
+	/* --dur: 0.3s;
+	--color-dark: #2f2f2f;
+	--color-light: #fff;
+	--color-brand: #57bd84;
+	--font-fam: 'Lato', sans-serif;
+	--height: 5rem;
+	--btn-width: 6rem;
+	--bez: cubic-bezier(0, 0, 0.43, 1.49); */
+}
+
+
+ * {
+	 box-sizing: border-box;
+	 padding: 0;
+	 margin: 0;
+}
+ body {
+	font-family: 'Source Sans Pro', sans-serif;
+	 font-size: 0.925rem;
+}
+ a {
+	 text-decoration: none;
+}
+.logo-text{
+	color: var(--blue);
+	font-weight: bold;
+}
+ /* .container {
+	 width: 1170px;
+	 position: relative;
+	 margin-left: auto;
+	 margin-right: auto;
+	 padding-left: 15px;
+	 padding-right: 15px;
+} */
+ /* .navbar, .navbar > .container {
+	 width: 100%;
+	 display: flex;
+	 flex-wrap: wrap;
+	 align-items: center;
+	 justify-content: space-between;
+} */
+ /* @media (max-width: 768px) {
+	 .navbar, .navbar > .container {
+		 display: block;
+	}
+} */
+ .navbar {
+	 box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+	 background-color: #fff;
+	 padding: 1rem 1.15rem;
+	 border-bottom: 1px solid #eceef3;
+	/* |----------------------------------- | Start navbar logo or brand etc.. |----------------------------------- */
+	/* |----------------------------------- | Start navbar menu |----------------------------------- */
+}
+ /* @media (min-width: 576px) {
+	 .navbar .container {
+		 max-width: 540px;
+	}
+}
+ @media (min-width: 768px) {
+	 .navbar .container {
+		 max-width: 720px;
+	}
+}
+ @media (min-width: 992px) {
+	 .navbar .container {
+		 max-width: 960px;
+	}
+}
+ @media (min-width: 1200px) {
+	 .navbar .container {
+		 max-width: 1140px;
+	}
+} */
+.logo img{
+	object-fit: contain;
+}
+ .navbar .navbar-header {
+	 display: flex;
+	 align-items: center;
+}
+ @media (max-width: 768px) {
+	 .navbar .navbar-header {
+		 width: 100%;
+		 display: flex;
+		 align-items: center;
+		 justify-content: space-between;
+		 flex-direction: row-reverse;
+	}
+}
+ .navbar .navbar-header .navbar-toggler {
+	 cursor: pointer;
+	 border: none;
+	 display: none;
+	 outline: none;
+}
+ @media (max-width: 768px) {
+	 .navbar .navbar-header .navbar-toggler {
+		 display: block;
+	}
+}
+ .navbar .navbar-header .navbar-toggler span {
+	 height: 2px;
+	 width: 22px;
+	 background-color: #929aad;
+	 display: block;
+}
+ .navbar .navbar-header .navbar-toggler span:not(:last-child) {
+	 margin-bottom: 0.2rem;
+}
+ .navbar .navbar-header > a {
+	 font-weight: 500;
+	 color: #3c4250;
+}
+ .navbar .navbar-menu {
+	 display: flex;
+	 align-items: center;
+	 flex-basis: auto;
+	 flex-grow: 1;
+}
+@media (min-width: 992px) {
+	.navbar .navbar-menu {
+		flex-grow: 0;
+   }
+}
+ @media (max-width: 768px) {
+	 .navbar .navbar-menu {
+		 display: none;
+		 text-align: center;
+	}
+}
+ .navbar .navbar-menu .navbar-nav {
+	 margin-left: auto;
+	 flex-direction: row;
+	 display: flex;
+	 padding-left: 0;
+	 margin-bottom: 0;
+	 list-style: none;
+}
+ @media (max-width: 768px) {
+	 .navbar .navbar-menu .navbar-nav {
+		 width: 100%;
+		 display: block;
+		 border-top: 1px solid #eee;
+		 margin-top: 1rem;
+	}
+}
+ .navbar .navbar-menu .navbar-nav > li > a {
+	 color: #3c4250;
+	 text-decoration: none;
+	 display: inline-block;
+	 padding: 0.5rem 1rem;
+	 font-weight: 600;
+}
+ .navbar .navbar-menu .navbar-nav > li > a:hover {
+	 color: #66f;
+}
+ @media (max-width: 768px) {
+	 .navbar .navbar-menu .navbar-nav > li > a {
+		 border-bottom: 1px solid #eceef3;
+	}
+}
+ .navbar .navbar-menu .navbar-nav > li.active a {
+	 color: var(--blue);
+}
+ .navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown {
+	 list-style: none;
+	 position: absolute;
+	 top: 150%;
+	 left: 0;
+	 background-color: #fff;
+	 padding-top: 0.5rem;
+	 padding-bottom: 0.5rem;
+	 min-width: 160px;
+	 width: auto;
+	 white-space: nowrap;
+	 box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+	 z-index: 99999;
+	 border-radius: 0.75rem;
+	 display: none;
+}
+ @media (max-width: 768px) {
+	 .navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown {
+		 position: relative;
+		 box-shadow: none;
+	}
+}
+ .navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown li a {
+	 color: #3c4250;
+	 padding: 0.25rem 1rem;
+	 display: block;
+}
+ .navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown.show {
+	 display: block !important;
+}
+ .navbar .navbar-menu .navbar-nav .dropdown > .separator {
+	 height: 1px;
+	 width: 100%;
+	 margin-top: 9px;
+	 margin-bottom: 9px;
+	 background-color: #eceef3;
+}
+ .navbar .navbar-dropdown {
+	 position: relative;
+}
+ .navbar .navbar-header > a span {
+	 /* color: #66f; */
+}
+ .navbar .navbar-header h4 {
+	 font-weight: 500;
+	 font-size: 1.25rem;
+}
+ @media (max-width: 768px) {
+	 .navbar .navbar-header h4 {
+		 font-size: 1.05rem;
+	}
+}
+
+/* Search */
+.search_input {
+	width: 100%;
+	padding: 8px 14px;
+
+	background-color: #EBEBEB !important;
+	transition: transform 250ms ease-in-out;
+	font-size: 14px;
+	line-height: 18px;
+	background-color: #EBEBEB;
+	color: #575756;
+	background-color: transparent;
+/*         background-image: url(http://mihaeltomic.com/codepen/input-search/ic_search_black_24px.svg); */
+
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-size: 18px 18px;
+	background-position: 95% center;
+	/* border-radius: 50px; */
+	border: 0px solid #575756;
+	transition: all 250ms ease-in-out;
+	backface-visibility: hidden;
+	transform-style: preserve-3d;
+}
+.search_input::placeholder {
+	color: color(#575756 a(0.8));
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+}
+.search_input:hover, .search_input:focus{
+	padding: 8px 14px;
+	outline: 0;
+	/* border: 1px solid transparent; */
+	border-bottom: 1px solid #575756;
+	border-radius: 0;
+	background-position: 100% center;
+}
